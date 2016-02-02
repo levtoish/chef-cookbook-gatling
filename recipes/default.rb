@@ -17,10 +17,8 @@ gatling_results       = "#{node['gatling']['install_prefix']}/gatling/results"
 group node['gatling']['group']
 
 user node['gatling']['user'] do
-    supports :manage_home => false
     group node['gatling']['group']
-    shell "/bin/bash"
-    home "#{node['gatling']['install_prefix']}/gatling"
+    shell '/bin/false'
 end
 
 user_ulimit node['gatling']['user'] do
